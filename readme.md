@@ -10,21 +10,45 @@ Modellare la struttura di un database per memorizzare tutti i dati riguardanti u
 - per ogni appello d'Esame a cui lo Studente ha partecipato, è necessario memorizzare il voto ottenuto, anche se non sufficiente. Pensiamo a quali entità (tabelle) creare per il nostro database e cerchiamo poi di stabilirne le relazioni. Infine, andiamo a definire le colonne e i tipi di dato di ogni tabella.
 
 ## tabella dipartimento:
-    
+- ID | BIGINT - PK - AI
+- NOME| VARCHAR(50) - NOT NULL
+- DESCRIZIONE | TEXT(300) - NULL
 
-## tabella corso di laurea
 
+## tabella corsi di laurea
+- ID | BIGINT - PK - AI
+- NOME | VARCHAR(50)
+- DIPARTIMENTO_ID | FK
 
 ## tabella corsi
-
+- ID | BIGINT - PK - AI 
+- NOME | VARCHAR(50)
+- CREDITI | TINYINT 
+- CORSI_DI_LAUREA_ID
 
 ## tabella isegnanti
-
+- ID | BIGINT - PK - AI
+- NOME | VARCHAR(50)
+- COGNOME | VARCHAR(50)
+- EMAIL | VARCHAR(50)
+- ID_CORSI - FK
 
 ## tabella studenti
+- ID | BIGINT - PK - AI
+- NOME | VARCHAR(50)
+- COGNOME | VARCHAR(50)
+- EMAIL | VARCHAR(50)
+- CORSO_DI_LAUREA_ID | FK
+- APPELLO_ID | BIGINT - FK
 
 
 ## tabella appelli d'esame
-
+- ID | BIGINT - AI - PK
+- DATA | DATE
+- STUDENTI_ID | FK
+- CORSI_ID | FK
 
 ## tabella risultati
+- ID | BIGINT - PK - AI
+- VOTO | TINYINT 
+- APPELLO_ID | FK
