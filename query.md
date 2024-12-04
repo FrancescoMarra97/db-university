@@ -27,7 +27,8 @@ where `level` = "magistrale"
 from departments
 count = 12;
 
-8) select * from `teachers`
+8) select count(*) 
+ from `teachers`
  where `phone` is null	
  50 row(s) returned	0,000 sec / 0,000 sec
 
