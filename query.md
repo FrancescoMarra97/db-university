@@ -4,6 +4,8 @@
 4) select * from `courses` where `period` = "I semestre" AND `year` = 1	286 row(s) returned	0,000 sec / 0,000 sec
 5) select * from `exams` where date = "2020-06-20" AND hour > "14:00:00"	21 row(s) returned	0,016 sec / 0,000 sec
 6) select * from `degrees` where `level` = "magistrale"	38 row(s) returned	0,000 sec / 0,000 sec
+7) select * from `departments`	12 row(s) returned	0,031 sec / 0,000 sec
+
 
 
 
