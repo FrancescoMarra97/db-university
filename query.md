@@ -47,7 +47,14 @@ where id = 58
 1 row(s) affected Rows matched: 1  Changed: 1  Warnings: 0	0.031 sec
 
 
+11) select *
+from students
+where name="Francesco" and surname= "Booleano"
+(	id:5001	degree_id:43	name:Francesco	surname:Booleano	date_of_birth:1990-05-14	fiscal_code:ABCDEF12G34H567I	enrolment_date:2020-09-01	registration_number:123456	email:francesco.booleano@libero.it)
 
+delete from students
+where id = "5001"
+1 row(s) affected	0.063 sec
 
 
 
