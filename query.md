@@ -35,7 +35,17 @@ count = 12;
  values (null, 43, "Francesco" , "Booleano", "1990-05-14", "ABCDEF12G34H567I", "2020-09-01", "123456", "francesco.booleano@libero.it")	
  1 row(s) affected	0.031 sec
 
-10) 
+10) select * 
+from teachers 
+where name = "Pietro" AND surname = "Rizzo" 
+LIMIT 0, 1000	1 row(s) returned	0.000 sec / 0.000 sec
+	(id: 58 name:Pietro	surname:Rizzo	phone:+21 6710 0964205	email:sanna.michele@negri.it	office_address:Contrada Santoro 17 Appartamento 30	office_number: 125)
+
+update teachers 
+set office_number = "126" 
+where id = 58	
+1 row(s) affected Rows matched: 1  Changed: 1  Warnings: 0	0.031 sec
+
 
 
 
